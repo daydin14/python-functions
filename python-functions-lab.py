@@ -26,6 +26,26 @@ print(largest([10,4,2,231,91,54]))
 
 
 # Challenge 3
+print('\n Challenge 3: \n')
+# First attempt:
+# def occurances(str1, str2):
+#     if(len(str1) == 0 or len(str2) == 0):
+#         return 'You entered at least 1 empty string, please try again.'
+#     else:
+#         count = 0
+#         for idx in enumerate(str1):
+#             if str2 in str1:
+#                 count += 1
+#     return count
+
+def occurances(str1, str2):
+    return str1.count(str2)
+
+print(occurances('fleep floop', 'e'))
+print(occurances('fleep floop', 'p'))
+print(occurances('fleep floop', 'ee'))
+print(occurances('fleep floop', 'fe'))
 
 
 # Challenge 4
+print('\n Challenge 4: \n')
