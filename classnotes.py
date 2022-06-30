@@ -25,3 +25,9 @@ def compute (a, b, op):
 
 print( compute(1,2, add))
 
+
+def f(*args):
+    print( type(args) )
+    for arg in args:
+        print(arg)
+f(1,2,'SEI')
