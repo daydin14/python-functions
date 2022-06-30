@@ -42,4 +42,22 @@ def dev_skills(dev_name, *args):
         dev['skills'].append(skill)
     return dev
 print(dev_skills('David', 'HTML', 'CSS', 'Javascript', 'Python'))
-# 
+
+def dev_skills2(dev_name, **kwargs):
+    # kwargs = looking for key:value pairs, 
+    dev = {'name': dev_name, 'skills': {}}
+    # unpackingn the tuples returned by the items function
+    for skill, rating in kwargs.items():
+        dev['skills'][skill] = rating
+    return dev
+print(dev_skills2('David', HTML=5, CSS=3, JavaScript=4, Python=2))
+
+def arg_demo(pos1, pos2, *args, **kwargs):
+    print(f'Positional params: {pos1}, {pos2}')
+    print('*args')
+    for arg in args:
+        print(' ', arg)
+    print('**kwargs:')
+    for keyword, value in kwargs.items():
+        print(f' {keyword}: {value}')
+arg_demo('A', 'B', 1,2,3, color='purple', shape='circle')
