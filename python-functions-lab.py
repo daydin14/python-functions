@@ -37,10 +37,8 @@ print('\n Challenge 3: \n')
 #             if str2 in str1:
 #                 count += 1
 #     return count
-
 def occurances(str1, str2):
     return str1.count(str2)
-
 print(occurances('fleep floop', 'e'))
 print(occurances('fleep floop', 'p'))
 print(occurances('fleep floop', 'ee'))
@@ -49,3 +47,14 @@ print(occurances('fleep floop', 'fe'))
 
 # Challenge 4
 print('\n Challenge 4: \n')
+def product(*args):
+    numbers = []
+    product = 1
+    for number in args:
+        numbers.append(number)
+        product *= number
+    
+    return product
+print(product(-1,4))
+print(product(2, 5, 5))
+print(product(4, 0.5, 5))
